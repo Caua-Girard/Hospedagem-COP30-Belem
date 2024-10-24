@@ -4,7 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Login</title>
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="Login.css">
+=======
+    <link rel="stylesheet" href="../Login.css">
+    <script>
+        function validateForm(event) {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+
+            // Expressão regular básica para validar o formato do email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!email || !password) {
+                errorMessage.style.display = "block";
+                errorMessage.textContent = "Por favor, preencha todos os campos.";
+                event.preventDefault(); // Impede o envio do formulário
+            } else if (!emailRegex.test(email)) {
+                errorMessage.style.display = "block";
+                errorMessage.textContent = "Por favor, insira um email válido.";
+                event.preventDefault(); // Impede o envio se o email for inválido
+            } else {
+                errorMessage.style.display = "none"; // Esconde a mensagem de erro
+            }
+        }
+    </script>
+>>>>>>> Stashed changes
 </head>
 <body>
     <div class="container">

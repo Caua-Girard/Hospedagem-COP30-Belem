@@ -1,0 +1,65 @@
+<<<<<<< Updated upstream
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de registro</title>
+    <link rel="stylesheet" href="Register.css">
+    <script>
+        
+        function validateForm(event) {
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            const errorMessage = document.getElementById("error-message");
+
+            if (password !== confirmPassword) {
+                errorMessage.style.display = "block";
+                errorMessage.textContent = "As senhas são diferentes.";
+                event.preventDefault(); // Impede o envio do formulário
+            } else {
+                errorMessage.style.display = "none";
+                
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-content">
+                <button class="btn-Voltar" onclick="location.href='/Login/Login.html'">
+                    <img src="ImagemRegister/backRegister (2).svg" style="height: 20px;" alt="Voltar" />
+                </button>
+                
+                <h1 class="title">Crie sua conta</h1>
+                <h2 class="subtitle">Cadastre-se para explorar todas as funcionalidades</h2>
+                <form class="login-form" onsubmit="validateForm(event)">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Digite seu email" required>
+                    
+                    <label for="password">Senha</label>
+                    <div class="password-container">
+                        <input type="password" id="password" class="password-input" placeholder="Digite sua senha" required> 
+                    </div>
+                
+                    <label for="confirmPassword">Confirme sua senha</label>
+                    <div class="password-container">
+                        <input type="password" id="confirmPassword" class="password-input" placeholder="Confirme sua senha" required>
+
+                    </div>
+
+                    <!-- Mensagem de erro -->
+                    <div id="error-message" class="error-message">As senhas são diferentes.</div>
+
+                    <button type="submit" class="login-button">Confirmar Registro</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+>>>>>>> Stashed changes
