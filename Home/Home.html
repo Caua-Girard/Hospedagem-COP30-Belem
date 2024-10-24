@@ -1,6 +1,4 @@
 
-<<<<<<< Updated upstream
-=======
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -18,108 +16,68 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
+  <style>
+    /* Navbar Styles */
+    .navbar {
+      background-color: #000; /* Preto */
+      padding: 1rem;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1rem;
+    }
+
+    .navbar a:hover {
+      color: #ff9900; /* Cor de destaque ao passar o mouse */
+    }
+
+    .navbar .right {
+      float: right;
+    }
+  </style>
 </head>
 
 <body>
   <header class="header" id="navigation-menu">
-    <div class="container">
-      <nav>
-        <a href="#" class="logo"> <img src="image/logo.png" alt=""> </a>
-
-        <ul class="nav-menu"> <!-- fazer link para o usuario ir para pagina de Login e de Registro, adiconar esse link em todas as paginas-->
-          <li> <a href="#home" class="nav-link">Home</a> </li>
-          
-        
-        </ul>
-
-        <div class="hambuger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">Sobre</a>
+      <a href="#room">Hospedagens</a>
+      <a href="#restaurant">Restaurantes</a>
+      <div class="right">
+        <a href="../Loguin/Login.html">Login</a>
+        <a href="../Register/Register.html">Registro</a>
+      </div>
+    </nav>
   </header>
-  <script>
-    const hambuger = document.querySelector('.hambuger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    hambuger.addEventListener("click", mobileMenu);
-
-    function mobileMenu() {
-      hambuger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-    }
-
-    const navLink = document.querySelectorAll('.nav-link');
-    navLink.forEach((n) => n.addEventListener("click", closeMenu));
-
-    function closeMenu() {
-      hambuger.classList.remove("active");
-      navMenu.classList.remove("active");
-    }
-  </script>
-
-  
-  <script>
-    function img(anything) {
-      document.querySelector('.slide').src = anything;
-    }
-
-    function change(change) {
-      const line = document.querySelector('.image');
-      line.style.background = change;
-    }
-  </script>
-  <section class="book"> <!-- Adaptar para funcionar como um sistema de Chekin para o usuario escolher as  opções disponiveis naquela data, fazer um função js para sortear 5 opções de hoteis diferentes indepedente das datas que o usuario escolha-->
-    <div class="container flex">
-      <div class="input grid">
-        <div class="box">
-          <label>Check-in:</label>
-          <input type="date" placeholder="Check-in-Date">
-        </div>
-        <div class="box">
-          <label>Check-out:</label>
-          <input type="date" placeholder="Check-out-Date">
-        </div>
-        <div class="box">
-          <label>Adults:</label> <br>
-          <input type="number" placeholder="0">
-        </div>
-        <div class="box">
-          <label>Children:</label> <br>
-          <input type="number" placeholder="0">
-        </div>
-      </div>
-      <div class="search">
-        <input type="submit" value="SEARCH">
-      </div>
-    </div>
-  </section>
+ 
   <section class="about top" id="about"> <!-- Alterar isso pela introdução do usuario no site, explicar do que se trata e das funcionalidades-->
     <div class="container flex">
       <div class="left">
         <div class="img">
-          <img src="image/a1.jpg" alt="" class="image1">
-          <img src="image/a2.jpg" alt="" class="image2">
+          <img src="ImagemHome/FotoPanoramicaBelém_upscaled.png" alt="" class="image1">
+          <img src="ImagemHome/veropeso_upscaled.png" alt="" class="image2">
         </div>
       </div>
       <div class="right">
         <div class="heading">
-          <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
-          <h2>Welcome to Luviana Hotel Resort</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <button class="btn1">READ MORE</button>
+          <h5>ELEVE O CONFORTO A UM NOVO PATAMAR</h5>
+          <h2>Bem-vindo ao melhor site de reservas do Pará</h2>
+          <p>Descubra as melhores opções de hospedagem em Belém do Pará, desde hotéis luxuosos até acomodações ecológicas e únicas. Aqui, garantimos que sua experiência de viagem seja inesquecível.</p>
+          <p>Navegue por uma seleção exclusiva de estabelecimentos que atendem a todos os gostos e orçamentos. Se você procura conforto, natureza ou aventura, temos a opção perfeita para você!</p> 
         </div>
       </div>
     </div>
   </section>
   <section class="room top" id="room"> <!-- alterar isso pelas 3 hospedagens mais caras de belém-->
     <div class="container">
-      <div class="heading_top flex1">
+      <div class="heading_top flex1"> 
         <div class="heading">
-          <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+          <h5>ELEVE O CONFORTO A UM NOVO PATAMAR</h5>
           <h2>Rooms $ Suites</h2>
         </div>
         <div class="button">
@@ -130,123 +88,70 @@
       <div class="content grid">
         <div class="box">
           <div class="img">
-            <img src="image/r1.jpg" alt="">
+            <img src="ImagensRest-Suites/Grand-mercure_upscaled.jpg" alt="">
           </div>
           <div class="text">
-            <h3>Superior Soble Rooms</h3>
-            <p> <span>$</span>129 <span>/per night</span> </p>
+            <h3>Gran-Mercure Suite</h3>
+            <p> <span>R$/span>240 <span>/por noite</span> </p>
           </div>
         </div>
         <div class="box">
           <div class="img">
-            <img src="image/r2.jpg" alt="">
+            <img src="ImagensRest-Suites/radisson-hotel_upscaled.jpg" alt="">
           </div>
           <div class="text">
-            <h3>Superior Soble Rooms</h3>
-            <p> <span>$</span>129 <span>/per night</span> </p>
+            <h3>Nome e localização suite</h3>
+            <p> <span>R$</span>100 <span>/por noite</span> </p>
           </div>
         </div>
         <div class="box">
           <div class="img">
-            <img src="image/r3.jpg" alt="">
+            <img src="ImagensRest-Suites/Atrium-quinta_upscaled.jpg" alt="">
           </div>
           <div class="text">
-            <h3>Superior Soble Rooms</h3>
-            <p> <span>$</span>129 <span>/per night</span> </p>
+            <h3>Nome e localização suite</h3>
+            <p> <span>R$</span>150 <span>/por noite</span> </p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="wrapper wrapper2 top">
-    <div class="container">
-      <div class="text">
-        <div class="heading">
-          <h5>AT THE HEART OF COMMUNICATION</h5>
-          <h2>People Say</h2>
-        </div>
-
-        <div class="para">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-
-          <div class="box flex">
-            <div class="img">
-              <img src="image/c.jpg" alt="">
-            </div>
-            <div class="name">
-              <h5>KATE PALMER</h5>
-              <h5>IDAHO</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <section class="restaurant top" id="restaurant"> <!--Alterar isso por comidas tipicas de Belém que os Visitantes iram encontrar nos hoteis e Adiconar fotos delas-->
     <div class="container flex">
       <div class="left">
-        <img src="image/re.jpg" alt="">
+        
       </div>
       <div class="right">
         <div class="text">
-          <h2>Our Restaurant</h2>
-          <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div class="heading">
+            <h5>Mais que restaurantes, são uma experiência culinária!</h5>
+
+          </div>
+          <h2>Conheça os melhores restaurantes de Belém</h2>
         </div>
         <div class="accordionWrapper">
           <div class="accordionItem open">
-            <h2 class="accordionIHeading">Italian Kitchen</h2>
+            <h2 class="accordionIHeading">Conheça o Santa Grelha</h2>
             <div class="accordionItemContent">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
+              <img src="ImagensRest-Suites/restaurante_upscaled.jpg" alt="Santa Grelha">
+              <h5 class="heading">  O Santa Grelha é um dos restaurantes mais famosos de Belém, entregando uma experiencia unica ao consumidor</h5>
+
             </div>
-          </div>
-          <div class="accordionItem close">
-            <h2 class="accordionIHeading">Mexican Kitchen</h2>
+          </div> 
+          <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Conheça o Famiglia-Sicilia</h2>
             <div class="accordionItemContent">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
+                <img src="ImagensRest-Suites/famiglia-sicilia_upscaled.jpg" alt="Famiglia-Sicilia">
+                <h5 class="heading"> O Famiglia-Sicilia se destaca pela culinária impecavel e ambiente  acolhedor</h5>
+
             </div>
-          </div>
-          <div class="accordionItem close">
-            <h2 class="accordionIHeading">Italian Kitchen</h2>
-            <div class="accordionItemContent">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
-          <div class="accordionItem close">
-            <h2 class="accordionIHeading">Mexican Kitchen</h2>
-            <div class="accordionItemContent">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
+</div>
+       
   </section>
-  <script>
-    var accItem = document.getElementsByClassName('accordionItem');
-    var accHD = document.getElementsByClassName('accordionIHeading');
-
-    for (i = 0; i < accHD.length; i++) {
-      accHD[i].addEventListener('click', toggleItem, false);
-    }
-
-    function toggleItem() {
-      var itemClass = this.parentNode.className;
-      for (var i = 0; i < accItem.length; i++) {
-        accItem[i].className = 'accordionItem close';
-      }
-      if (itemClass == 'accordionItem close') {
-        this.parentNode.className = 'accordionItem open';
-      }
-    }
-  </script>
-
-
 <!-- alterar os links de caminhos das fotos pelas fotos das 8 imagens-->
   <section class="gallary mtop " id="gallary">
     <div class="container">
@@ -265,25 +170,22 @@
           <img src="ImagemHome/gran_mercure/frente_gran-mercure.jpg" alt="gran_mercure">
         </div>
         <div class="item">
-          <img src="ImagemHome/atrium/frente_atrium.jpg" alt="">
+          <img src="ImagemHome/atrium/frente_atrium.jpg" alt="atrium">
         </div>
         <div class="item">
-          <img src="ImagemHome/grao-para/faixada_grao-para.jpg" alt="">
+          <img src="ImagemHome/grao-para/faixada_grao-para.jpg" alt="grao-para">
         </div>
         <div class="item">
-          <img src="ImagemHome/ibis/faixada_ibis.jpg" alt="">
+          <img src="ImagemHome/ibis/faixada_ibis.jpg" alt="ibis">
         </div>
         <div class="item">
-          <img src="ImagemHome/princesa/frente_louca.jpg" alt="">
+          <img src="ImagemHome/princesa/frente_louca.jpg" alt="princesa">
         </div>
         <div class="item">
-          <img src="ImagemHome/Radisson hotel/download.jfif" alt="">
+          <img src="ImagemHome/Radisson hotel/download_upscaled.png " alt="Radisson">
         </div>
         <div class="item">
-          <img src="  " alt="">
-        </div>
-        <div class="item">
-          <img src="image/g8.jpg" alt="">
+          <img src="ImagensRest-Suites/ReservAmazon.jpg" alt=""ReservAmazon>
         </div>
       </div>
 
@@ -314,10 +216,6 @@
       }
     })
   </script>
-
-
-
-
 <!-- Mapa -->
 <section class="map top">
     <iframe id="hotelMap" 
@@ -329,15 +227,6 @@
         loading="lazy">
     </iframe>
 </section>
-
-<!-- Script para mudar o mapa -->
-<script>
-    document.getElementById('hotelSelect').addEventListener('change', function() {
-        var selectedMapUrl = this.value; // Pega a URL do mapa correspondente
-        document.getElementById('hotelMap').src = selectedMapUrl; // Atualiza o iframe com o novo mapa
-    });
-</script>
-
     <footer>
         <div class="footer">
                
@@ -352,7 +241,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

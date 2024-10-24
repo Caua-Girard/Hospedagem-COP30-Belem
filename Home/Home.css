@@ -274,25 +274,27 @@ input {
 }
 
 .about {
-  margin-bottom: 50px;
+  display: flex; /* Ativa o modelo flexível */
+  align-items: flex-end; /* Alinha as imagens pela parte inferior */
+  position: relative; /* Necessário para posicionamento relativo de elementos filhos */
 }
 
 .about .img {
   position: relative;
 }
 
+
 .about .image1 {
-  width: 310px;
-  height: 450px;
+  width: 320px;
+  height: 390px;
 }
 
 .about .image2 {
-  width: 325px;
-  height: 220px;
-  position: absolute;
-  bottom: 5px;
-  z-index: 2;
-  right: 30%;
+  width: 320px;
+  height: 390px;
+  margin-left: -200px; /* Ajuste a margem para alinhar conforme necessário */
+  z-index: 2; /* Se necessário, mantenha o z-index */
+  padding-left: 100px;
 }
 
 .heading {
