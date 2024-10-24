@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de registro</title>
     <link rel="stylesheet" href="Register.css">
+<<<<<<< HEAD
     <script>
         function validateForm(event) {
             event.preventDefault(); // Impede o envio automático do formulário
@@ -59,3 +60,43 @@
     </div>
 </body>
 </html>
+=======
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+<div class="container">
+    <h1>Registro de Usuário</h1>
+
+<form action="#" method="POST">
+    <div class="form-group">
+        <label for="NomeDoUsuario"></label>
+        <input type="text" id="NomeDoUsuario" name="NomeDoUsuario" placeholder="coloque seu nome de usuário" required>
+        <i class='bx bx-user'></i>
+    </div>
+
+    <div class ="form-group">
+        <label for="Email"></label>
+        <input type="email" id="Email" name="Email" placeholder="insira seu E-mail" required>
+        <i class='bx bx-envelope' ></i>
+    </div>
+
+    <div class="form-group">
+        <label for="Senha"></label>
+        <input type="password" id="Senha" name="Senha" placeholder="insira sua senha" required>
+        <i class='bx bxs-key' ></i>
+    </div>
+    
+    <div class="form-group">
+        <label for="confirmeSenha"></label>
+        <input type="password" id="confirmeSenha" name="confirmeSenha" placeholder="insira sua senha novamente" required>
+        <i class='bx bxs-key' ></i>
+    </div>
+    <input type="submit" value="registrar">
+</form>
+<div class= "info-text">
+    Já têm uma conta ? <a href="#">entre aqui</a>
+</div>    
+</body>
+</html>
+>>>>>>> 3c741939bd5e6b85978de415bbda4ecc8baeb768
