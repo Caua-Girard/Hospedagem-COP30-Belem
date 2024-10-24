@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Login</title>
-<<<<<<< Updated upstream
     <link rel="stylesheet" href="Login.css">
-=======
-    <link rel="stylesheet" href="../Login.css">
     <script>
         function validateForm(event) {
             const email = document.getElementById("email").value;
@@ -30,7 +27,6 @@
             }
         }
     </script>
->>>>>>> Stashed changes
 </head>
 <body>
     <div class="container">
@@ -38,19 +34,23 @@
             <div class="form-content">
                 <h1 class="title">Bem-vindo</h1>
                 <h2 class="subtitle">Faça seu login</h2>
-                <form class="login-form">
+                <form class="login-form" onsubmit="validateForm(event)" action="../Home/Home.html">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Digite seu email">
+                    <input type="email" id="email" placeholder="Digite seu email" required>
                     
                     <label for="password">Senha</label>
-                    <input type="password" id="password" placeholder="Digite sua senha">
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+
+                    <!-- Mensagem de erro -->
+                    <div id="error-message" class="error-message" style="color: red; display: none;"></div>
+
                     <button class="login-button" type="submit">Entrar</button>
                 </form>
-
+                
                 <div class="divider"></div>
-
                 <div class="create-account">
-                   <p>Não tem um conta?</p> <a href="#">Crie sua Conta!</a>
+                    <p>Não tem uma conta?</p> 
+                    <a href="..\Register\Register.html" class="create-account-link">Crie sua Conta!</a>
                 </div>
             </div>
         </div>
