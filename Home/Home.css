@@ -547,6 +547,13 @@ input {
 .owl-carousel .owl-prev:hover {
   background: #C1B086 !important;
 }
+.owl-carousel .item p {
+  text-align: center;
+  margin-top: 8px; /* Ajusta o espaço entre a imagem e o nome */
+  font-size: 16px; /* Tamanho da fonte */
+  color: #333; /* Cor do texto */
+}
+
 
 /*--------------gallary--------*/
 /*--------------map--------*/
